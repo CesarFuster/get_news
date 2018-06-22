@@ -1,2 +1,10 @@
-<h1>News#index</h1>
-<p>Find me in app/views/news/index.html.erb</p>
+<% @news.each do |news| %>
+<b><%= news.title %></b>
+
+<%= news.description %>
+
+<a href="<%= news.link %>" target="_blank" rel="noopener">Ver Mais no Site</a>
+
+Data de atualização: <%= news.created_at %>
+
+<% end %>
